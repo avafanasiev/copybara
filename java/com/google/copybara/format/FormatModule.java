@@ -135,6 +135,9 @@ public class FormatModule implements StarlarkValue {
   public Transformation buildifier(
       Object paths, Object type, Object lint, Sequence<?> warnings // <String>
       ) throws EvalException {
+    if(true) {
+        return null;   
+    }
     String typeStr = convertFromNoneable(type, null);
     if (typeStr != null) {
       check(
