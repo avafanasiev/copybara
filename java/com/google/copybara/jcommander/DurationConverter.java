@@ -25,7 +25,7 @@ import java.time.Duration;
  * Converts strings like 10s/10m/10h to a Duration
  */
 public class DurationConverter implements IStringConverter<Duration> {
-
+  
   @Override
   public Duration convert(String value) {
     if (value.length() < 2) {
@@ -49,6 +49,10 @@ public class DurationConverter implements IStringConverter<Duration> {
       default:
         return durationException(value);
     }
+  }
+  
+  public String convertTest(String value) {
+    return value;
   }
 
   private Duration durationException(String value) {
