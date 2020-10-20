@@ -47,6 +47,8 @@ import javax.annotation.Nullable;
  */
 public class FolderOrigin implements Origin<FolderRevision> {
 
+  private static final String LABEL_NAME_TEST = "TestLabelName";
+  
   private static final String LABEL_NAME = "FolderOrigin-RevId";
   private static final ImmutableSet<PosixFilePermission> FILE_PERMISSIONS =
       ImmutableSet.of(PosixFilePermission.OWNER_READ, PosixFilePermission.OWNER_WRITE);
@@ -142,6 +144,10 @@ public class FolderOrigin implements Origin<FolderRevision> {
     return LABEL_NAME;
   }
 
+  public String getGeneratedName(String s) {
+    return s;
+  }
+  
   @Override
   public String getType() {
     return "folder.origin";
