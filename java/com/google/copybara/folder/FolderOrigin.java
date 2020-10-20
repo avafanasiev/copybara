@@ -82,7 +82,7 @@ public class FolderOrigin implements Origin<FolderRevision> {
     checkCondition(Files.exists(path), "%s folder doesn't exist", path);
     checkCondition(Files.isDirectory(path), "%s is not a folder", path);
     checkCondition(Files.isReadable(path) && Files.isExecutable(path), "%s is not readable/executable", path);
-
+if(true){}
     return new FolderRevision(path, ZonedDateTime.now(ZoneId.systemDefault()));
   }
 
